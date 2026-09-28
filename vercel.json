@@ -3,5 +3,6 @@
   "framework": null,
   "installCommand": "npm --prefix vercel-demo ci",
   "buildCommand": "npm --prefix vercel-demo run build",
-  "outputDirectory": "vercel-demo/out"
+  "outputDirectory": "vercel-demo/out",
+  "cleanUrls": true
 }
