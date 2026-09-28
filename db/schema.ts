@@ -1,0 +1,3 @@
+import {integer,sqliteTable,text} from "drizzle-orm/sqlite-core";
+import {sql} from "drizzle-orm";
+export const bookings=sqliteTable("bookings",{id:integer("id").primaryKey({autoIncrement:true}),reference:text("reference").notNull().unique(),name:text("name").notNull(),phone:text("phone").notNull(),email:text("email").notNull(),make:text("make").notNull(),registration:text("registration").notNull(),mileage:text("mileage"),service:text("service").notNull(),preferredDate:text("preferred_date").notNull(),preferredTime:text("preferred_time").notNull(),message:text("message").notNull(),status:text("status").notNull().default("pending"),createdAt:text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`)});
